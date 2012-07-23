@@ -1,0 +1,6 @@
+{% extends "forms/email_base.txt" %}
+
+{% block main %}{% for field, value in fields %}
+{{ field }}: {{ value|default:"-" }}
+{% endfor %}
+{% endblock %}

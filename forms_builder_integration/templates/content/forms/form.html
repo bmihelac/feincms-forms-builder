@@ -1,0 +1,22 @@
+{% load i18n %}
+{% load uni_form_tags %}
+
+<div id="form{{ form.form.slug }}">
+
+  {% if form.form.intro %}
+    {{ form.form.intro|safe }}
+  {% endif %}
+
+  <form method="post" action="#form{{ content.id }}" class="uniForm" novalidate
+    {% if form.is_multipart %}enctype="multipart/form-data"{% endif %}>{% csrf_token %}
+    <input type="hidden" name="_formcontent" value="{{ content.id }}">
+    <fieldset class="inlineLabels">
+      {{ form|as_uni_form }}
+    </fieldset>
+
+    <div class="buttonHolder">
+      <input type="submit" class="submit submitButton primary" value="{{ form.form.button_text }}">
+    </div>
+  </form>
+
+</div>
