@@ -1,5 +1,5 @@
 {% load i18n %}
-{% load uni_form_tags %}
+{% load crispy_forms_tags %}
 
 <div id="form{{ form.form.slug }}">
 
@@ -7,11 +7,11 @@
     {{ form.form.intro|safe }}
   {% endif %}
 
-  <form method="post" action="#form{{ content.id }}" class="uniForm" novalidate
+  <form method="post" action="#form{{ content.id }}" novalidate
     {% if form.is_multipart %}enctype="multipart/form-data"{% endif %}>{% csrf_token %}
     <input type="hidden" name="_formcontent" value="{{ content.id }}">
     <fieldset class="inlineLabels">
-      {{ form|as_uni_form }}
+      {{ form|crispy }}
     </fieldset>
 
     <div class="buttonHolder">
