@@ -10,6 +10,22 @@ Requirements:
 * django-forms-builder
 * crispy-forms (optional for rendering forms inside page)
 
+Installation
+------------
+
+Add required applications to ``settings.py``::
+
+    INSTALLED_APPS = (
+        ...
+        'feincms',
+        'feincms.module.page',
+    
+        'crispy_forms',
+        'forms_builder.forms',
+        'impckg.forms_builder_integration',
+        ...
+    )
+
 Usage
 -----
 
