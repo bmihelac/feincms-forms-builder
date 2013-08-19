@@ -1,7 +1,7 @@
 feincms-forms-builder
 =====================
 
-Integrate django-forms-builder into FeinCMS.
+Integrate django-forms-builder_ into FeinCMS_.
 
 Requirements:
 -------------
@@ -45,3 +45,7 @@ Templates
     content/forms/form.htm
     forms/email_base.txt
     forms/email_form.txt
+    
+.. django-forms-builder_: https://github.com/stephenmcd/django-forms-builder
+
+.. FeinCMS_: https://github.com/feincms/feincms
