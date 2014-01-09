@@ -13,6 +13,11 @@ Requirements:
 Installation
 ------------
 
+::
+
+  pip install -e git+https://github.com/bmihelac/feincms-forms-builder.git#egg=feincms-forms-builder
+
+
 Add required applications to ``settings.py``::
 
     INSTALLED_APPS = (
@@ -22,7 +27,7 @@ Add required applications to ``settings.py``::
     
         'crispy_forms',
         'forms_builder.forms',
-        'impckg.forms_builder_integration',
+        'forms_builder_integration',
         ...
     )
 
